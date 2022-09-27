@@ -6,13 +6,29 @@ let levelling = require('../lib/levelling')
  let jimp = require('jimp') 
  let PhoneNumber = require('awesome-phonenumber') 
  const defaultMenu = { 
-   before: `%readmore`.trim(),
-  header: `˚₊· ͟͟͞͞%category༉`, 
-   body: '◦ %cmd %islimit %isPremium', 
-   footer: '', 
-   after: `⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕. 
+   before: `llı *USER*
+⬡ Name %name! 
+⬡ Tersisa  *%limit Limit* 
+⬡ Role  *%role* 
+⬡ Level  *%level (%exp / %maxexp)* 
+⬡ %xp4levelup
+⬡ %totalexp XP secara Total 
+  
+llı *TODAY*
+⬡ Tanggal:  *%week %weton, %date* 
+⬡ Tanggal Islam:  *%dateIslamic* 
+⬡ Waktu:  *%time* 
  
-*%me@^%version*
+llı *INFO BOT*
+⬡ Name Bot: *%me*
+⬡ Uptime:  *%uptime (%muptime)* 
+⬡ Database: %rtotalreg dari %totalreg 
+⬡ Memory Used :  *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB* 
+%readmore`.trim(),
+  header: `˚₊· ͟͟͞͞%category ͟͟͞͞₊·˚`, 
+   body: '⸙͎۪۫  %cmd %islimit %isPremium', 
+   footer: '\n', 
+   after: `*⌕ %me@^%version*
 ${'```%npmdesc```'}
  `,
 }
@@ -170,7 +186,7 @@ ${'```%npmdesc```'}
            let hao = `▸ Ⓟ = for premium users.\n▸ Ⓛ = fitur berlimit.
  
  *Official Bot By @${'0'.split('@')[0]}* 
- *Powered By @${'16199961931'.split('@')[0]}*`
+ *Powered By @${'6283132749084'.split('@')[0]}*`
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
      let pp = await conn.profilePictureUrl(who, 'image').catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png")
      let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}')) 
@@ -242,7 +258,7 @@ ${'```%npmdesc```'}
    "product": { 
    "productImage":{ 
    "mimetype": "image/jpeg", 
-   "jpegThumbnail": await (await fetch('https://telegra.ph/file/8f729fca4c6096d469664.jpg')).buffer(), //Gambarnye
+   "jpegThumbnail": await (await fetch('https://telegra.ph/file/f32f779ce8eaf70158228.jpg')).buffer(), //Gambarnye
      }, 
    "title": `${ucapan()}`, 
    "description": '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib, 
@@ -267,7 +283,7 @@ ${'```%npmdesc```'}
     surface : 1,
     message: '[❗] Memuat Menu ' + teks + '...',
     orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/e6c498c568fd8d35f9395.jpg')).buffer(), //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/f32f779ce8eaf70158228.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -282,9 +298,9 @@ ${'```%npmdesc```'}
     itemCount : 2022,
     status: 1,
     surface : 1,
-    message: `lans IQ-MD By Lans`, 
+    message: `DARK-MD么 By Maulana`, 
     orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/db5b4aed0d6d2e6c10c8f.jpg')).buffer(), //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/f32f779ce8eaf70158228.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -317,17 +333,17 @@ ${'```%npmdesc```'}
        } 
      }) 
      if (teks == '404') {
- 	let cute = `${pickRandom(['https://telegra.ph/file/dc8b3a29b4b2c770d1727.jpg','https://telegra.ph/file/1767c5d6b71e200231ca6.jpg', 'https://telegra.ph/file/13488976473884608c03c.jpg','https://telegra.ph/file/21329b42e497787e3c2c2.jpg','https://telegra.ph/file/6999d6a56326852484746.jpg', 'https://telegra.ph/file/5df66151d217bb5cd1627.jpg', 'https://telegra.ph/file/c71a6b41795ab649daef7.jpg', 'https://telegra.ph/file/c9a695262426ed4e8b3b8.jpg'])}` 
+ 	let cute = `${pickRandom(['https://telegra.ph/file/520a7d8d531f976ed23b5.jpg', 'https://telegra.ph/file/862e5a42d3435e12b2ec2.jpg', 'https://telegra.ph/file/aebb49a158df5a6da47d6.jpg', 'https://telegra.ph/file/8d0f6476b51d76eaf8cea.jpg','https://telegra.ph/file/cc86d58dd6c6ec6828ce0.jpg','https://telegra.ph/file/309fe309cf1a8f0b9a463.jpg', 'https://telegra.ph/file/10377f92ab3043979485b.jpg', 'https://telegra.ph/file/b4a60b95b203cfb6678f3.jpg', 'https://telegra.ph/file/81ac8ecd55d4a6deb8463.jpg'])}` 
  	let ori = `Hi Kak, @${m.sender.split`@`[0]}
  
-Saya Adalah Villain Bot Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
-conn.sendMessage(m.chat, {
+Saya Adalah Villain Multidevice么 Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
+/*conn.sendMessage(m.chat, {
     	react: {
     		text: emot,
     		key: m.key
     	}
-    })	
-return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod And Button It Doesn't Look Di Rectly Type ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', m)
+    })*/
+return conn.send3ButtonLoc(m.chat, await conn.resize(pickRandom(global.waifu), 300, 300), ori, `Note : Jika Anda Menggunakan Wa Lama Atau Mod Dan Tombol Itu Tidak Terlihat Langsung Ketik ${_p}simplemenu`, 'MENU DARK-MD么', '.simplemenu', 'DONASI BOT🗿', '.donasi', 'SEW BOT', '.sewa', m)
     
     }
   
@@ -372,7 +388,7 @@ return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod A
        exp: exp - min, 
        maxexp: xp, 
        totalexp: exp, 
-       xp4levelup: max - exp <= 0 ? `Siap untuk *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`, 
+       xp4levelup: max - exp <= 0 ? `Siap untuk  *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`, 
        github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]', 
        level, limit, name, umur, money, age, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role, 
        readmore: readMore 
@@ -380,11 +396,11 @@ return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod A
      text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]) 
      //await conn.reply(m.chat, '*L o a d i n g . . .*', fload) 
  
-   /*await conn.send2ButtonImg(m.chat, await (await fetch('https://api.xteam.xyz/textpro/glitch?text=' + teks + '&text2=CUTE%20VILLAIN-MD%20BY%20LANS%20SAN&APIKEY=bf8ff984af1506b7')).buffer(), text.trim(), hao, 'Donasi', '.donasi', 'Rules', '.rules', m, { 
+   /*await conn.send2ButtonImg(m.chat, await (await fetch('https://api.xteam.xyz/textpro/glitch?text=' + teks + '&text2=Dark%20Botz-MD%20BY%20Maulana%20Chan&APIKEY=bf8ff984af1506b7')).buffer(), text.trim(), hao, 'Donasi', '.donasi', 'Rules', '.rules', m, { 
      quoted: ftoko, 
      contextInfo: { forwardingScore: 99999, isForwarded: true, 
          externalAdReply: { 
-             title: 'Cute Villain-MD Testing Project By Lans San', 
+             title: 'Dark-MD Testing Project By Maulana', 
              body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, 
              description: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, 
              mediaType: 2, 
@@ -393,14 +409,14 @@ return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod A
          } 
       } 
      })*/
-//await conn.send3ButtonLoc(m.chat, await conn.resize(await (await fetch('https://api.xteam.xyz/textpro/glitch?text=' + teks + '&text2=Lans%20IQ-MD%20BY%20ZIV%20SAN&APIKEY=bf8ff984af1506b7')).buffer(), 300, 200), '◈┈┉────[ *DASHBOARD* ]────┉┈◈' , text.trim(), 'Owner', '.owner', 'Donasi', '.donasi', 'Rules', '.rules', m)
-await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + teks)).buffer(), 300, 200), text.trim(), `Aktif Selama : ${uptime}\n${week} ${date}\n${dateIslamic}`, 'Owner', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+//await conn.send3ButtonLoc(m.chat, await conn.resize(await (await fetch('https://api.xteam.xyz/textpro/glitch?text=' + teks + '&text2=VILLAIN%20IQ-MD%20BY%20ZIV%20SAN&APIKEY=bf8ff984af1506b7')).buffer(), 300, 200), '◈┈┉────[ *DASHBOARD* ]────┉┈◈' , text.trim(), 'Owner', '.owner', 'Donasi', '.donasi', 'Rules', '.rules', m)
+await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + teks)).buffer(), 300, 200), text.trim(), `▸ Ⓟ = for premium users.\n▸ Ⓛ = fitur berlimit.\n\nAktif Selama : ${uptime}\n${week} ${date}\n${dateIslamic}`, 'Owner', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
 //await conn.send2ButtonImg(m.chat, await (await fetch(`${logos()}`)).buffer(), '──────────[ *DASHBOARD* ]──────────', text, 'OWNER', '.owner', '\n\nSAYA PEDO DAN SAYA BANGGA ꒪꒳꒪', 'a', fkon, { contextInfo: { forwardingScore: 999, isForwarded: true}})
 /*await conn.send2ButtonDoc(m.chat, '──────────[ *DASHBOARD* ]──────────', text, 'OWNER', '.owner', 'Rules', '.rules', m, { 
      quoted: ftoko, 
      contextInfo: { forwardingScore: 99999, isForwarded: true, 
          externalAdReply: { 
-             title: 'LANS-MD Testing Project By LANS', 
+             title: 'DarkBotz-MD Testing Project By maulana', 
              body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, 
              description: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, 
              mediaType: 2, 
@@ -410,9 +426,9 @@ await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + te
       } 
      })*/
      //conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m).catch(_ => conn.reply(m.chat, text.trim(), m))
-  conn.sendFile(m.chat, 'https://a.uguu.se/jvdOuNWe.mp3', 'haori.mp3', null, m, true, {
+  conn.sendFile(m.chat, 'https://bit.ly/3AtM34K', 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah lans : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@fory_whitecattiktok?_t=8V5TGON5rgv&_r=1', thumbnail: await (await fetch('https://telegra.ph/file/8d216a35e2ac344d128f8.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `Lans Ganteng 🗿 : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow My Instagram Plis •~•'])}`, sourceUrl: 'https://www.instagram.com/lans_store03/', thumbnail: await (await fetch('https://telegra.ph/file/dffdaf0e8d59ad104e526.jpg')).buffer(),}} 
      })
 } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
@@ -422,7 +438,7 @@ ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah lans : ${ohari} 
  handler.help = ['menu', 'help', '?'] 
  handler.tags = ['main'] 
  handler.command = /^(m(enu)?|help|\?)$/i 
- handler.owner = false 
+ handler.owner = false
  handler.mods = false 
  handler.premium = false 
  handler.group = false 
